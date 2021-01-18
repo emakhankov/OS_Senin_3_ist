@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */; };
 		B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */; };
-		B1DC406325B5FE1B00BA134A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406225B5FE1B00BA134A /* ViewController.swift */; };
 		B1DC406625B5FE1B00BA134A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406425B5FE1B00BA134A /* Main.storyboard */; };
 		B1DC406925B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406725B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld */; };
 		B1DC406B25B5FE1C00BA134A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406A25B5FE1C00BA134A /* Assets.xcassets */; };
 		B1DC406E25B5FE1C00BA134A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406C25B5FE1C00BA134A /* LaunchScreen.storyboard */; };
+		B1DC407F25B60B3D00BA134A /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407725B60B3D00BA134A /* Location+CoreDataClass.swift */; };
+		B1DC408025B60B3D00BA134A /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407825B60B3D00BA134A /* Location+CoreDataProperties.swift */; };
+		B1DC408125B60B3D00BA134A /* ImageNote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407925B60B3D00BA134A /* ImageNote+CoreDataClass.swift */; };
+		B1DC408225B60B3D00BA134A /* ImageNote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407A25B60B3D00BA134A /* ImageNote+CoreDataProperties.swift */; };
+		B1DC408325B60B3D00BA134A /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407B25B60B3D00BA134A /* Folder+CoreDataClass.swift */; };
+		B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */; };
+		B1DC408525B60B3D00BA134A /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */; };
+		B1DC408625B60B3D00BA134A /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1DC405B25B5FE1B00BA134A /* IOS_Senin_3_ist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Senin_3_ist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1DC406225B5FE1B00BA134A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1DC406525B5FE1B00BA134A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1DC406825B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOS_Senin_3_ist.xcdatamodel; sourceTree = "<group>"; };
 		B1DC406A25B5FE1C00BA134A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1DC406D25B5FE1C00BA134A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1DC406F25B5FE1C00BA134A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DC407725B60B3D00BA134A /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1DC407825B60B3D00BA134A /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1DC407925B60B3D00BA134A /* ImageNote+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageNote+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1DC407A25B60B3D00BA134A /* ImageNote+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageNote+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1DC407B25B60B3D00BA134A /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +72,31 @@
 		B1DC405D25B5FE1B00BA134A /* IOS_Senin_3_ist */ = {
 			isa = PBXGroup;
 			children = (
+				B1DC408825B60B4900BA134A /* Models */,
 				B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */,
 				B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */,
-				B1DC406225B5FE1B00BA134A /* ViewController.swift */,
 				B1DC406425B5FE1B00BA134A /* Main.storyboard */,
 				B1DC406A25B5FE1C00BA134A /* Assets.xcassets */,
 				B1DC406C25B5FE1C00BA134A /* LaunchScreen.storyboard */,
 				B1DC406F25B5FE1C00BA134A /* Info.plist */,
-				B1DC406725B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld */,
 			);
 			path = IOS_Senin_3_ist;
+			sourceTree = "<group>";
+		};
+		B1DC408825B60B4900BA134A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1DC406725B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld */,
+				B1DC407B25B60B3D00BA134A /* Folder+CoreDataClass.swift */,
+				B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */,
+				B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */,
+				B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */,
+				B1DC407A25B60B3D00BA134A /* ImageNote+CoreDataProperties.swift */,
+				B1DC407925B60B3D00BA134A /* ImageNote+CoreDataClass.swift */,
+				B1DC407725B60B3D00BA134A /* Location+CoreDataClass.swift */,
+				B1DC407825B60B3D00BA134A /* Location+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +169,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1DC408625B60B3D00BA134A /* Note+CoreDataProperties.swift in Sources */,
+				B1DC407F25B60B3D00BA134A /* Location+CoreDataClass.swift in Sources */,
 				B1DC406925B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld in Sources */,
-				B1DC406325B5FE1B00BA134A /* ViewController.swift in Sources */,
 				B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */,
+				B1DC408125B60B3D00BA134A /* ImageNote+CoreDataClass.swift in Sources */,
+				B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */,
 				B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */,
+				B1DC408325B60B3D00BA134A /* Folder+CoreDataClass.swift in Sources */,
+				B1DC408525B60B3D00BA134A /* Note+CoreDataClass.swift in Sources */,
+				B1DC408025B60B3D00BA134A /* Location+CoreDataProperties.swift in Sources */,
+				B1DC408225B60B3D00BA134A /* ImageNote+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
