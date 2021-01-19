@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */; };
 		B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */; };
 		B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */; };
 		B1DC406625B5FE1B00BA134A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406425B5FE1B00BA134A /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1DC405B25B5FE1B00BA134A /* IOS_Senin_3_ist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Senin_3_ist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,14 +89,15 @@
 			isa = PBXGroup;
 			children = (
 				B1DC406725B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld */,
+				B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */,
 				B1DC407B25B60B3D00BA134A /* Folder+CoreDataClass.swift */,
 				B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */,
 				B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */,
 				B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */,
-				B1DC407A25B60B3D00BA134A /* ImageNote+CoreDataProperties.swift */,
-				B1DC407925B60B3D00BA134A /* ImageNote+CoreDataClass.swift */,
 				B1DC407725B60B3D00BA134A /* Location+CoreDataClass.swift */,
 				B1DC407825B60B3D00BA134A /* Location+CoreDataProperties.swift */,
+				B1DC407A25B60B3D00BA134A /* ImageNote+CoreDataProperties.swift */,
+				B1DC407925B60B3D00BA134A /* ImageNote+CoreDataClass.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */,
 				B1DC408125B60B3D00BA134A /* ImageNote+CoreDataClass.swift in Sources */,
 				B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */,
+				B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */,
 				B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */,
 				B1DC408325B60B3D00BA134A /* Folder+CoreDataClass.swift in Sources */,
 				B1DC408525B60B3D00BA134A /* Note+CoreDataClass.swift in Sources */,

@@ -8,8 +8,38 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 @objc(Note)
 public class Note: NSManagedObject {
 
+    class func newNote(name: String) -> Note {
+        let note = Note(context: CoreDataManager.sharedInstance.managedObjectContext)
+        note.name = name;
+        note.dateUpdate = Date()
+        return note
+    }
+    
+    
+    func addImage(image: UIImage)
+    {
+        let imageNote =  ImageNote(context: CoreDataManager.sharedInstance.managedObjectContext)
+        
+        imageNote.imageBig = image.jpegData(compressionQuality: 1)
+        
+        self.image = imageNote
+        
+        
+    }
+    
+    func addLocation(latitude: Double, lontitude: Double)
+    {
+        let location = Location(context: CoreDataManager.sharedInstance.managedObjectContext)
+        
+        location.lat = latitude
+        location.lon = lontitude
+        
+        self.location = location
+    }
+    
 }

@@ -12,4 +12,17 @@ import CoreData
 @objc(Folder)
 public class Folder: NSManagedObject {
 
+    class func newFolder(name: String) -> Folder {
+        let folder = Folder(context: CoreDataManager.sharedInstance.managedObjectContext)
+        folder.name = name;
+        folder.dataUpdate = Date();
+        return folder
+    }
+    
+    func newNote() -> Note {
+        let note = Note(context: CoreDataManager.sharedInstance.managedObjectContext)
+        note.folder = self;
+        note.dateUpdate = Date()
+        return note
+    }
 }
