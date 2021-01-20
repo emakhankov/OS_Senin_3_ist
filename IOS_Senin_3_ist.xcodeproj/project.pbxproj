@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */; };
+		B1670C1025B8AF1F004F6C49 /* FoldersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */; };
 		B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */; };
 		B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */; };
 		B1DC406625B5FE1B00BA134A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406425B5FE1B00BA134A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersController.swift; sourceTree = "<group>"; };
 		B1DC405B25B5FE1B00BA134A /* IOS_Senin_3_ist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Senin_3_ist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1670C0E25B8AF05004F6C49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B1DC405225B5FE1B00BA134A = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		B1DC405D25B5FE1B00BA134A /* IOS_Senin_3_ist */ = {
 			isa = PBXGroup;
 			children = (
+				B1670C0E25B8AF05004F6C49 /* Controllers */,
 				B1DC408825B60B4900BA134A /* Models */,
 				B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */,
 				B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */,
@@ -174,6 +185,7 @@
 			files = (
 				B1DC408625B60B3D00BA134A /* Note+CoreDataProperties.swift in Sources */,
 				B1DC407F25B60B3D00BA134A /* Location+CoreDataClass.swift in Sources */,
+				B1670C1025B8AF1F004F6C49 /* FoldersController.swift in Sources */,
 				B1DC406925B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld in Sources */,
 				B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */,
 				B1DC408125B60B3D00BA134A /* ImageNote+CoreDataClass.swift in Sources */,

@@ -11,13 +11,13 @@
         <!--Folders-->
         <scene sceneID="ttT-tv-HCs">
             <objects>
-                <tableViewController id="Zn6-XK-v5Z" sceneMemberID="viewController">
+                <tableViewController id="Zn6-XK-v5Z" customClass="FoldersController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cBb-PF-2Jl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="J5x-yJ-IKj" rowHeight="72" style="IBUITableViewCellStyleDefault" id="Aro-8I-pGg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellFolder" textLabel="J5x-yJ-IKj" rowHeight="72" style="IBUITableViewCellStyleDefault" id="Aro-8I-pGg">
                                 <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Aro-8I-pGg" id="LYa-tF-qtf">
@@ -41,7 +41,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Folders" id="f38-Wj-poW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1lM-qh-u2s"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1lM-qh-u2s">
+                            <connections>
+                                <action selector="pushAddAction:" destination="Zn6-XK-v5Z" id="YjV-29-ges"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="S1j-2M-uEv" kind="show" id="bFi-SP-4Je"/>
