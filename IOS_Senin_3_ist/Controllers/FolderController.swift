@@ -1,42 +1,21 @@
 //
-//  FoldersController.swift
+//  FolderController.swift
 //  IOS_Senin_3_ist
 //
-//  Created by Jenya on 20.01.2021.
+//  Created by Jenya on 21.01.2021.
 //
 
 import UIKit
 
-class FoldersController: UITableViewController {
-   
-    @IBAction func pushAddAction(_ sender: Any) {
-    
-        
-        
-        let alertController = UIAlertController(title: "Create new folder", message: "", preferredStyle: .alert);
-        
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Folder name";
-        }
-        
-        let alertActionAdd = UIAlertAction(title: "Create", style: UIAlertAction.Style.default) { (alert) in
-            let folderName = alertController.textFields?[0].text
-            if folderName != "" {
-                _ = Folder.newFolder(name: folderName!)
-                CoreDataManager.sharedInstance.saveContext()
-                self.tableView.reloadData();
-            }
-        }
+class FolderController: UITableViewController {
 
-        let alertActionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (UIAlertAction) in
-                        
+    var folder: Folder?
+    var notesActual: [Note] {
+        if let folder = folder {
+            return folder.notesSorted
         }
-        
-        alertController.addAction(alertActionAdd)
-        alertController.addAction(alertActionCancel)
-        
-        present(alertController, animated: true) {
-            
+        else {
+            return notes
         }
     }
     
@@ -44,11 +23,12 @@ class FoldersController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        
-        
-        
+        if let folder = folder {
+            navigationItem.title = folder.name
+        }
+        else {
+            navigationItem.title = "All notes"
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -65,16 +45,16 @@ class FoldersController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return folders.count
+        return notesActual.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellFolder", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNote", for: indexPath)
 
-        // Configure the cell...
-        let folderInCell = folders[indexPath.row];
-        cell.textLabel?.text = folderInCell.name;
+        let noteInCell = notesActual[indexPath.row]
+        cell.textLabel?.text = noteInCell.name
+        cell.detailTextLabel?.text = noteInCell.dateUpdateString
         return cell
     }
     
@@ -87,38 +67,17 @@ class FoldersController: UITableViewController {
     }
     */
 
-    
-    // Типа распоменровали и заработало
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            let folderInCell = folders[indexPath.row]
-            CoreDataManager.sharedInstance.managedObjectContext.delete(folderInCell)
-            CoreDataManager.sharedInstance.saveContext()
-                        
-            tableView.deleteRows(at: [indexPath], with: .left)
-            
+            tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-        
-        performSegue(withIdentifier: "goToFolder", sender: self)
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier=="goToFolder" {
-            let  selectedFolder = folders[tableView.indexPathForSelectedRow!.row]
-            (segue.destination as! FolderController).folder = selectedFolder
-        }
-    }
- 
-    
+    */
 
     /*
     // Override to support rearranging the table view.
