@@ -136,8 +136,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="q8H-Kt-sxi">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DrR-55-ejJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DrR-55-ejJ">
+                            <connections>
+                                <action selector="pushAddAction:" destination="0H2-rj-soE" id="01q-Eq-4SV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="3Pn-BU-LSM" kind="show" identifier="goToNote" id="jpS-Ub-Z6H"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osn-bt-eqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,10 +190,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Name Folder" id="6fu-NX-26e">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oEt-eb-cqy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oEt-eb-cqy">
+                            <connections>
+                                <action selector="pushAddAction:" destination="S1j-2M-uEv" id="nV6-f9-kH0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="3Pn-BU-LSM" kind="show" id="nKH-XA-DJ1"/>
+                        <segue destination="3Pn-BU-LSM" kind="show" identifier="goToNote" id="nKH-XA-DJ1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G80-8L-Voj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,7 +207,7 @@
         <!--Name Note-->
         <scene sceneID="5yc-WM-d2I">
             <objects>
-                <tableViewController id="3Pn-BU-LSM" sceneMemberID="viewController">
+                <tableViewController id="3Pn-BU-LSM" customClass="NoteController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yb2-uk-Ahr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,13 +236,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Note" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-28-oX2">
-                                                    <rect key="frame" x="13" y="4" width="389" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Note" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GP0-28-oX2">
+                                                    <rect key="frame" x="10" y="5" width="394" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="GP0-28-oX2" secondAttribute="trailing" constant="10" id="fcG-LV-wyA"/>
+                                                <constraint firstItem="GP0-28-oX2" firstAttribute="leading" secondItem="4UT-z1-8Mx" secondAttribute="leading" constant="10" id="nhe-Kq-Lyo"/>
+                                                <constraint firstItem="GP0-28-oX2" firstAttribute="centerY" secondItem="4UT-z1-8Mx" secondAttribute="centerY" id="w8U-be-ApX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -306,10 +321,15 @@
                     <navigationItem key="navigationItem" title="Name Note" id="Nhs-0J-ESo">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="FYY-UT-ss9"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="SZy-ng-wuL" id="NXR-nf-7GQ"/>
+                        <outlet property="textDescription" destination="h1E-SG-Uju" id="WUP-PO-eGc"/>
+                        <outlet property="textName" destination="GP0-28-oX2" id="2Ay-HR-5ek"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knj-as-XDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2862.3188405797105" y="-644.19642857142856"/>
+            <point key="canvasLocation" x="2901" y="-444"/>
         </scene>
         <!--Folder-->
         <scene sceneID="JZU-SA-7Mr">
@@ -369,6 +389,9 @@
             <point key="canvasLocation" x="405.79710144927537" y="691.74107142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nKH-XA-DJ1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

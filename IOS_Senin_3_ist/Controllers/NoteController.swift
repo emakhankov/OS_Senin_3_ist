@@ -1,50 +1,30 @@
 //
-//  FolderController.swift
+//  NoteController.swift
 //  IOS_Senin_3_ist
 //
-//  Created by Jenya on 21.01.2021.
+//  Created by Jenya on 22.01.2021.
 //
 
 import UIKit
 
-class FolderController: UITableViewController {
-
-    var selectedNote: Note?
-    @IBAction func pushAddAction(_ sender: Any) {
-        selectedNote = Note.newNote(name: "new Name", inFolder: folder)
-        performSegue(withIdentifier: "goToNote", sender: self)
-    }
+class NoteController: UITableViewController {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "goToNote" {
-            (segue.destination as! NoteController).note = selectedNote;
-
-            
-        }
-    }
+    var note: Note?
     
+    @IBOutlet weak var imageView: UIImageView!
     
-    var folder: Folder?
-    var notesActual: [Note] {
-        if let folder = folder {
-            return folder.notesSorted
-        }
-        else {
-            return notes
-        }
-    }
+    @IBOutlet weak var textName: UITextField!
+    
+    @IBOutlet weak var textDescription: UITextView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let folder = folder {
-            navigationItem.title = folder.name
-        }
-        else {
-            navigationItem.title = "All notes"
-        }
+        textName.text = note?.name
+        textDescription.text = note?.textDescription
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,38 +32,48 @@ class FolderController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData();
+    override func viewWillDisappear(_ animated: Bool) {
+     
+        if textName.text == "" && textDescription.text == "" {
+            CoreDataManager.sharedInstance.managedObjectContext.delete(note!);
+            CoreDataManager.sharedInstance.saveContext()
+            return
+        }
+        
+        if note?.name != textName.text || note?.textDescription != textDescription.text {
+            note?.dateUpdate = Date()
+        }
+        
+        note?.name = textName.text
+        note?.textDescription = textDescription.text
+        
+        CoreDataManager.sharedInstance.saveContext();
+    
     }
+    
+    
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+    //override func numberOfSections(in tableView: UITableView) -> Int {
+    //    // #warning Incomplete implementation, return the number of sections
+   //     return 0
+    //}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return notesActual.count
-    }
+   // override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   //     // #warning Incomplete implementation, return the number of rows
+  //      return 0
+   // }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNote", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let noteInCell = notesActual[indexPath.row]
-        cell.textLabel?.text = noteInCell.name
-        cell.detailTextLabel?.text = noteInCell.dateUpdateString
+        // Configure the cell...
+
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let noteInCell = notesActual[indexPath.row]
-        selectedNote = noteInCell
-        performSegue(withIdentifier: "goToNote", sender: self)
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

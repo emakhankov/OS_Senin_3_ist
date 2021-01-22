@@ -13,10 +13,14 @@ import UIKit
 @objc(Note)
 public class Note: NSManagedObject {
 
-    class func newNote(name: String) -> Note {
+    class func newNote(name: String, inFolder: Folder?) -> Note {
         let note = Note(context: CoreDataManager.sharedInstance.managedObjectContext)
         note.name = name;
         note.dateUpdate = Date()
+        
+        //if let inFolder = inFolder {
+            note.folder = inFolder
+        //}
         return note
     }
     
