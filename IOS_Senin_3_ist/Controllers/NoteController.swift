@@ -51,7 +51,72 @@ class NoteController: UITableViewController {
     
     }
     
+    let imagePicker : UIImagePickerController = UIImagePickerController()
     
+    
+    //        SOURCETYPE
+     //   if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+    //        print ("no camera!")
+   //     } else {
+   //         print ("happycam!")
+   //     }
+     //        CAMERA TYPES
+   //     if !UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.rear){
+  //          print ("no rear camera!")
+  //      } else {
+   //         print ("rear camera available!")
+    //    }
+   //     if !UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.front){
+   //         print ("no front camera!")
+   //     } else {
+    //       print ("front camera available!")//
+   //    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 && indexPath.section == 0 {
+            
+            let alertController = UIAlertController(title: "Choose action for image", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            //imagePicker.isCameraDeviceAvailable == true {
+                let a1Camera = UIAlertAction(title: "Make a photo", style: UIAlertAction.Style.default) { (alert) in
+                
+                self.imagePicker.sourceType = .camera
+                self.imagePicker.delegate = self
+                    self.present(self.imagePicker, animated: true, completion: nil)
+                    
+                }
+                alertController.addAction(a1Camera)
+            }
+            
+            let a2Photo = UIAlertAction(title: "Select from library", style: UIAlertAction.Style.default) { (alert) in
+                
+                //self.imagePicker.sourceType = .photoLibrary
+                self.imagePicker.sourceType = .savedPhotosAlbum
+                self.imagePicker.delegate = self
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+            alertController.addAction(a2Photo)
+            
+            if self.imageView.image != nil {
+                let a3Delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive) { (alert) in
+                    self.imageView.image = nil
+                }
+                alertController.addAction(a3Delete)
+            }
+            
+            let a4Cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (alert) in
+                
+            }
+            alertController.addAction(a4Cancel)
+            
+            
+            present(alertController, animated: true, completion: nil)
+            
+            
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -120,4 +185,17 @@ class NoteController: UITableViewController {
     }
     */
 
+}
+
+
+extension NoteController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
