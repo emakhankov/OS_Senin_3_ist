@@ -75,6 +75,12 @@ class FolderController: UITableViewController {
         let noteInCell = notesActual[indexPath.row]
         cell.textLabel?.text = noteInCell.name
         cell.detailTextLabel?.text = noteInCell.dateUpdateString
+        if noteInCell.imageSmall != nil {
+            cell.imageView?.image = UIImage(data: noteInCell.imageSmall!)
+        } else {
+            cell.imageView?.image = nil
+        }
+        
         return cell
     }
     
@@ -93,17 +99,20 @@ class FolderController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            let noteInCell = notesActual[indexPath.row]
+            CoreDataManager.sharedInstance.managedObjectContext.delete(noteInCell)
+            CoreDataManager.sharedInstance.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

@@ -18,12 +18,18 @@ class NoteController: UITableViewController {
     @IBOutlet weak var textDescription: UITextView!
     
     
+    @IBAction func pushDneAction(_ sender: Any) {
+        saveNote()
+        navigationController?.popViewController(animated: true)
+        //dismiss(animated: true, completion: nil) // так не работает
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         textName.text = note?.name
         textDescription.text = note?.textDescription
+        imageView.image = note?.imageActual
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,9 +38,9 @@ class NoteController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-     
-        if textName.text == "" && textDescription.text == "" {
+    func saveNote()
+    {
+        if textName.text == "" && textDescription.text == ""  && imageView.image == nil {
             CoreDataManager.sharedInstance.managedObjectContext.delete(note!);
             CoreDataManager.sharedInstance.saveContext()
             return
@@ -46,10 +52,14 @@ class NoteController: UITableViewController {
         
         note?.name = textName.text
         note?.textDescription = textDescription.text
+        note?.imageActual = imageView.image
         
         CoreDataManager.sharedInstance.saveContext();
-    
     }
+    
+   // override func viewWillDisappear(_ animated: Bool) {
+   //
+   // }
     
     let imagePicker : UIImagePickerController = UIImagePickerController()
     
