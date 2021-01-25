@@ -17,6 +17,10 @@ class NoteController: UITableViewController {
     
     @IBOutlet weak var textDescription: UITextView!
     
+    @IBOutlet weak var labelFolder: UILabel!
+    
+    @IBOutlet weak var labelFolderName: UILabel!
+    
     
     @IBAction func pushDneAction(_ sender: Any) {
         saveNote()
@@ -31,12 +35,14 @@ class NoteController: UITableViewController {
         textDescription.text = note?.textDescription
         imageView.image = note?.imageActual
         
+        navigationItem.title = note?.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     
     func saveNote()
     {
@@ -57,6 +63,14 @@ class NoteController: UITableViewController {
         CoreDataManager.sharedInstance.saveContext();
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let folder = note?.folder {
+            labelFolderName.text = folder.name
+        } else {
+            labelFolderName.text = "-"
+        }
+    }
    // override func viewWillDisappear(_ animated: Bool) {
    //
    // }
@@ -85,6 +99,8 @@ class NoteController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 && indexPath.section == 0 {
+            
+            tableView.deselectRow(at: indexPath, animated: true) // Убрать нахрен выдыление у любой строки
             
             let alertController = UIAlertController(title: "Choose action for image", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         
@@ -185,15 +201,20 @@ class NoteController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "goToSelectFolder" {
+            (segue.destination as! SelectFolderController).note = note
+        }
+        
     }
-    */
+    
 
 }
 
@@ -208,4 +229,5 @@ extension NoteController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
 }

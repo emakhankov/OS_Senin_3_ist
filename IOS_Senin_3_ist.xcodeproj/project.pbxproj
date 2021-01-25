@@ -25,6 +25,7 @@
 		B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */; };
 		B1DC408525B60B3D00BA134A /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */; };
 		B1DC408625B60B3D00BA134A /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */; };
+		B1EA6E5825BF412400E824A9 /* SelectFolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA6E5725BF412400E824A9 /* SelectFolderController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B1DC407C25B60B3D00BA134A /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B1DC407D25B60B3D00BA134A /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B1DC407E25B60B3D00BA134A /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B1EA6E5725BF412400E824A9 /* SelectFolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFolderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */,
 				B1B8432525B9FDBA00327590 /* FolderController.swift */,
 				B18D3AF425BB501F001506C5 /* NoteController.swift */,
+				B1EA6E5725BF412400E824A9 /* SelectFolderController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				B18D3AF525BB501F001506C5 /* NoteController.swift in Sources */,
 				B1DC406925B5FE1B00BA134A /* IOS_Senin_3_ist.xcdatamodeld in Sources */,
 				B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */,
+				B1EA6E5825BF412400E824A9 /* SelectFolderController.swift in Sources */,
 				B1DC408125B60B3D00BA134A /* ImageNote+CoreDataClass.swift in Sources */,
 				B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */,
 				B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */,
