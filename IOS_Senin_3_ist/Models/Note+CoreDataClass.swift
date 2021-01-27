@@ -52,6 +52,43 @@ public class Note: NSManagedObject {
         }
     }
     
+    var locationActual: LocationCoordinate? {
+        get {
+            if self.location == nil {
+              return nil
+            } else {
+                return LocationCoordinate(lat: self.location!.lat, lon: self.location!.lon)
+            }
+        }
+        
+        set {
+            if newValue == nil && self.location != nil {
+                CoreDataManager.sharedInstance.managedObjectContext.delete(self.location!)
+            }
+            if newValue != nil && self.location != nil {
+                self.location?.lat = newValue!.lat
+                self.location?.lon = newValue!.lon
+            }
+            if newValue != nil && self.location == nil {
+                let newLocation = Location(context: CoreDataManager.sharedInstance.managedObjectContext)
+                newLocation.lat = newValue!.lat
+                newLocation.lon = newValue!.lon
+                self.location = newLocation;
+            }
+        }
+    }
+    
+    
+    func addCurrentLocation()
+    {
+        LocationManager.sharedInstance.getCurrentLocation { (location) in
+            //print("Получили локацию")
+            //print(location)
+            self.locationActual = location;
+        }
+    }
+    
+    
     
     func addImage(image: UIImage)
     {

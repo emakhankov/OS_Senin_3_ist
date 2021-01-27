@@ -98,9 +98,11 @@ class NoteController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true) // Убрать нахрен выдыление у любой строки
+        
         if indexPath.row == 0 && indexPath.section == 0 {
             
-            tableView.deselectRow(at: indexPath, animated: true) // Убрать нахрен выдыление у любой строки
+            
             
             let alertController = UIAlertController(title: "Choose action for image", message: "", preferredStyle: UIAlertController.Style.actionSheet)
         
@@ -211,6 +213,10 @@ class NoteController: UITableViewController {
         
         if segue.identifier == "goToSelectFolder" {
             (segue.destination as! SelectFolderController).note = note
+        }
+        
+        if segue.identifier == "goToMap" {
+            (segue.destination as! NoteMapController).note = note
         }
         
     }

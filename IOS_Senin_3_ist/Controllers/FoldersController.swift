@@ -45,6 +45,7 @@ class FoldersController: UITableViewController {
         super.viewDidLoad()
 
         
+        LocationManager.sharedInstance.requestAuthorization();  // Запросим например тут
         
         
         

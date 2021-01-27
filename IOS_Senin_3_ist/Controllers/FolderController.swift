@@ -12,6 +12,9 @@ class FolderController: UITableViewController {
     var selectedNote: Note?
     @IBAction func pushAddAction(_ sender: Any) {
         selectedNote = Note.newNote(name: "new Name", inFolder: folder)
+        selectedNote?.addCurrentLocation()
+        //print(selectedNote!.locationActual)
+        
         performSegue(withIdentifier: "goToNote", sender: self)
     }
     

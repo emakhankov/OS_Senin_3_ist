@@ -326,6 +326,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wct-5q-xKa" kind="show" identifier="goToMap" id="HwH-gj-bZL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -382,7 +385,37 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CK3-F2-4D8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="-539"/>
+            <point key="canvasLocation" x="3803" y="-827"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="d17-k9-lN0">
+            <objects>
+                <viewController id="Wct-5q-xKa" customClass="NoteMapController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ji2-uo-qCI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WWk-l5-eWX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1jI-MK-5MY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1jI-MK-5MY" firstAttribute="bottom" secondItem="WWk-l5-eWX" secondAttribute="bottom" id="Rht-bA-Lsy"/>
+                            <constraint firstItem="WWk-l5-eWX" firstAttribute="top" secondItem="1jI-MK-5MY" secondAttribute="top" id="dss-ig-LCq"/>
+                            <constraint firstItem="1jI-MK-5MY" firstAttribute="trailing" secondItem="WWk-l5-eWX" secondAttribute="trailing" id="gd8-YU-fUf"/>
+                            <constraint firstItem="WWk-l5-eWX" firstAttribute="leading" secondItem="1jI-MK-5MY" secondAttribute="leading" id="ovq-nn-v11"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="JOw-4D-i13"/>
+                    <connections>
+                        <outlet property="mapView" destination="WWk-l5-eWX" id="HUD-f4-lnp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOY-tq-1hX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3803" y="-114"/>
         </scene>
         <!--Folder-->
         <scene sceneID="JZU-SA-7Mr">
