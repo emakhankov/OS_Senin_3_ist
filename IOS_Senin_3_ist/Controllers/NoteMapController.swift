@@ -10,6 +10,8 @@ import MapKit
 
 class NoteAnnotation: NSObject, MKAnnotation {
     
+    var note: Note
+    
     var coordinate: CLLocationCoordinate2D
     
     var title: String?
@@ -17,8 +19,12 @@ class NoteAnnotation: NSObject, MKAnnotation {
     var subtitle: String?
     
     init(note: Note) {
+        
+        self.note = note
+        title = note.name
+        
         if note.locationActual != nil {
-        coordinate = CLLocationCoordinate2D(latitude: note.locationActual!.lat, longitude: note.locationActual!.lon)
+            coordinate = CLLocationCoordinate2D(latitude: note.locationActual!.lat, longitude: note.locationActual!.lon)
         } else {
             coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         }
@@ -44,13 +50,31 @@ class NoteMapController: UIViewController {
             
             let na = NoteAnnotation(note: note!)
             mapView.addAnnotation(na)
+            
             mapView.centerCoordinate = CLLocationCoordinate2D(latitude: note!.locationActual!.lat, longitude: note!.locationActual!.lon)
             
             
         }
+        
+        let ltgr = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
+        mapView.gestureRecognizers = [ltgr]
         // Do any additional setup after loading the view.
     }
     
+    @objc func handleLongTap(recognizer: UIGestureRecognizer) {
+        if recognizer.state != .began {
+            return
+        }
+        let point = recognizer.location(in: mapView)
+        let c = mapView.convert(point, toCoordinateFrom: mapView)
+        note?.locationActual = LocationCoordinate(lat: c.latitude, lon: c.longitude)
+        CoreDataManager.sharedInstance.saveContext()
+        
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let na = NoteAnnotation(note: note!)
+        mapView.addAnnotation(na)
+    }
 
     /*
     // MARK: - Navigation
@@ -88,5 +112,7 @@ extension NoteMapController: MKMapViewDelegate {
             
         }
     }
+    
+    
 }
 

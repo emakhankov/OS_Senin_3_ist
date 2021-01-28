@@ -84,7 +84,7 @@
         <!--Map-->
         <scene sceneID="uP1-ER-yYE">
             <objects>
-                <viewController id="Tgq-at-uG5" sceneMemberID="viewController">
+                <viewController id="Tgq-at-uG5" customClass="MapController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C6c-3h-SjH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="XwL-Nc-v1i"/>
+                    <connections>
+                        <outlet property="mapView" destination="a7w-UF-7sP" id="mBv-S0-Z2f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUu-M2-fnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,7 +217,7 @@
         <!--Name Note-->
         <scene sceneID="5yc-WM-d2I">
             <objects>
-                <tableViewController id="3Pn-BU-LSM" customClass="NoteController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="noteSID" id="3Pn-BU-LSM" customClass="NoteController" customModule="IOS_Senin_3_ist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yb2-uk-Ahr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
