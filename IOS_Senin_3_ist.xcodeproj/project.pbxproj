@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B135D56425C4825C00FE5B02 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135D56325C4825C00FE5B02 /* PriceManager.swift */; };
+		B135D56825C4874100FE5B02 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135D56725C4874100FE5B02 /* StoreManager.swift */; };
 		B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */; };
 		B1670C1025B8AF1F004F6C49 /* FoldersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */; };
 		B1703A7725C08F4D003EFBA1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1703A7625C08F4D003EFBA1 /* LocationManager.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B135D56325C4825C00FE5B02 /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
+		B135D56725C4874100FE5B02 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		B142C1E625B75E3C009F8AA7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B1670C0F25B8AF1F004F6C49 /* FoldersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersController.swift; sourceTree = "<group>"; };
 		B1703A7625C08F4D003EFBA1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B135D56225C4823100FE5B02 /* AppleStore */ = {
+			isa = PBXGroup;
+			children = (
+				B135D56325C4825C00FE5B02 /* PriceManager.swift */,
+				B135D56725C4874100FE5B02 /* StoreManager.swift */,
+			);
+			path = AppleStore;
+			sourceTree = "<group>";
+		};
 		B1670C0E25B8AF05004F6C49 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 		B1DC405D25B5FE1B00BA134A /* IOS_Senin_3_ist */ = {
 			isa = PBXGroup;
 			children = (
+				B135D56225C4823100FE5B02 /* AppleStore */,
 				B1703A7525C08F20003EFBA1 /* Location */,
 				B1670C0E25B8AF05004F6C49 /* Controllers */,
 				B1DC408825B60B4900BA134A /* Models */,
@@ -224,6 +238,8 @@
 				B1DC408425B60B3D00BA134A /* Folder+CoreDataProperties.swift in Sources */,
 				B142C1E725B75E3C009F8AA7 /* CoreDataManager.swift in Sources */,
 				B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */,
+				B135D56825C4874100FE5B02 /* StoreManager.swift in Sources */,
+				B135D56425C4825C00FE5B02 /* PriceManager.swift in Sources */,
 				B1DC408325B60B3D00BA134A /* Folder+CoreDataClass.swift in Sources */,
 				B1DC408525B60B3D00BA134A /* Note+CoreDataClass.swift in Sources */,
 				B1DC408025B60B3D00BA134A /* Location+CoreDataProperties.swift in Sources */,

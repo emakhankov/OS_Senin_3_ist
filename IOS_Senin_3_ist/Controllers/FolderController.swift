@@ -9,8 +9,26 @@ import UIKit
 
 class FolderController: UITableViewController {
 
+    var folder: Folder?
+    var notesActual: [Note] {
+        if let folder = folder {
+            return folder.notesSorted
+        }
+        else {
+            return notes
+        }
+    }
+    
+    var buyingForm = BuyingForm()
+    
     var selectedNote: Note?
     @IBAction func pushAddAction(_ sender: Any) {
+        
+        if buyingForm.isNeedToShow {
+            buyingForm.showForm(inController: self)
+            return
+        }
+        
         selectedNote = Note.newNote(name: "new Name", inFolder: folder)
         selectedNote?.addCurrentLocation()
         //print(selectedNote!.locationActual)
@@ -28,15 +46,6 @@ class FolderController: UITableViewController {
     }
     
     
-    var folder: Folder?
-    var notesActual: [Note] {
-        if let folder = folder {
-            return folder.notesSorted
-        }
-        else {
-            return notes
-        }
-    }
     
     
     override func viewDidLoad() {
@@ -53,6 +62,8 @@ class FolderController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
