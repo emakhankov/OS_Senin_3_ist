@@ -22,6 +22,7 @@ class FolderController: UITableViewController {
     var buyingForm = BuyingForm()
     
     var selectedNote: Note?
+    
     @IBAction func pushAddAction(_ sender: Any) {
         
         if buyingForm.isNeedToShow {
