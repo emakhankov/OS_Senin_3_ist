@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  IOS_Senin_3_ist
+
+  Created by Jenya on 31.01.2021.
+  
+*/
+CFBundleName = "Заметки";
+NSCameraUsageDescription = "Могу я получить доступ к камере";
+NSLocationWhenInUseUsageDescription = "Нужно воспользоваться определением локации";

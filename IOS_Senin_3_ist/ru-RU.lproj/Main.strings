@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "0Cf-bv-ihP"; */
+"0Cf-bv-ihP.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Name Folder"; ObjectID = "6fu-NX-26e"; */
+"6fu-NX-26e.title" = "Name Folder";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Fd1-YP-sqS"; */
+"Fd1-YP-sqS.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "Name Note"; ObjectID = "GP0-28-oX2"; */
+"GP0-28-oX2.placeholder" = "Name Note";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "J5x-yJ-IKj"; */
+"J5x-yJ-IKj.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Map"; ObjectID = "JOw-4D-i13"; */
+"JOw-4D-i13.title" = "Карта";
+
+/* Class = "UINavigationItem"; title = "Name Note"; ObjectID = "Nhs-0J-ESo"; */
+"Nhs-0J-ESo.title" = "Имя заметки";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "R9g-uS-rp4"; */
+"R9g-uS-rp4.text" = "Subtitle";
+
+/* Class = "UITabBarItem"; title = "Folder"; ObjectID = "VcZ-Cq-d66"; */
+"VcZ-Cq-d66.title" = "Папки";
+
+/* Class = "UINavigationItem"; title = "Map"; ObjectID = "XwL-Nc-v1i"; */
+"XwL-Nc-v1i.title" = "Карта";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "YXc-O4-jjK"; */
+"YXc-O4-jjK.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Ybx-90-q9x"; */
+"Ybx-90-q9x.text" = "Title";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "cwR-pM-vf6"; */
+"cwR-pM-vf6.text" = "Location";
+
+/* Class = "UINavigationItem"; title = "Folders"; ObjectID = "f38-Wj-poW"; */
+"f38-Wj-poW.title" = "Папки";
+
+/* Class = "UILabel"; text = "Folder"; ObjectID = "ghd-gV-AlO"; */
+"ghd-gV-AlO.text" = "Folder";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "h1E-SG-Uju"; */
+"h1E-SG-Uju.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "Note"; ObjectID = "odL-yt-B6H"; */
+"odL-yt-B6H.title" = "Заметка";
+
+/* Class = "UILabel"; text = "name_folder"; ObjectID = "pJk-Oz-kp2"; */
+"pJk-Oz-kp2.text" = "name_folder";
+
+/* Class = "UINavigationItem"; title = "Notes"; ObjectID = "q8H-Kt-sxi"; */
+"q8H-Kt-sxi.title" = "Заметки";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "rTC-T5-58f"; */
+"rTC-T5-58f.title" = "Карта";

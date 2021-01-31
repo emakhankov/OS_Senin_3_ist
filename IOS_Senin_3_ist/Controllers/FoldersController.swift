@@ -13,13 +13,13 @@ class FoldersController: UITableViewController {
     
         
         
-        let alertController = UIAlertController(title: "Create new folder", message: "", preferredStyle: .alert);
+        let alertController = UIAlertController(title: "Create new folder".localized(), message: "", preferredStyle: .alert);
         
         alertController.addTextField { (textField) in
-            textField.placeholder = "Folder name";
+            textField.placeholder = "Folder name".localized();
         }
         
-        let alertActionAdd = UIAlertAction(title: "Create", style: UIAlertAction.Style.default) { (alert) in
+        let alertActionAdd = UIAlertAction(title: "Create".localized(), style: UIAlertAction.Style.default) { (alert) in
             let folderName = alertController.textFields?[0].text
             if folderName != "" {
                 _ = Folder.newFolder(name: folderName!.uppercased())
@@ -28,7 +28,7 @@ class FoldersController: UITableViewController {
             }
         }
 
-        let alertActionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (UIAlertAction) in
+        let alertActionCancel = UIAlertAction(title: "Cancel".localized(), style: UIAlertAction.Style.default) { (UIAlertAction) in
                         
         }
         
