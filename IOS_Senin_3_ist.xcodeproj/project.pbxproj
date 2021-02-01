@@ -19,6 +19,8 @@
 		B19B1BFA25C1D75200C8BFAF /* NoteMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19B1BF925C1D75200C8BFAF /* NoteMapController.swift */; };
 		B19CC99225C32E89000508C2 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19CC99125C32E89000508C2 /* MapController.swift */; };
 		B1B8432625B9FDBA00327590 /* FolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B8432525B9FDBA00327590 /* FolderController.swift */; };
+		B1D79F0825C8641D00FCFD8E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D79F0725C8641D00FCFD8E /* NoteCell.swift */; };
+		B1D79F0B25C8709600FCFD8E /* Zaglushka.png in Resources */ = {isa = PBXBuildFile; fileRef = B1D79F0A25C8709600FCFD8E /* Zaglushka.png */; };
 		B1DC405F25B5FE1B00BA134A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */; };
 		B1DC406125B5FE1B00BA134A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */; };
 		B1DC406625B5FE1B00BA134A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1DC406425B5FE1B00BA134A /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		B19B1BF925C1D75200C8BFAF /* NoteMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMapController.swift; sourceTree = "<group>"; };
 		B19CC99125C32E89000508C2 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		B1B8432525B9FDBA00327590 /* FolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderController.swift; sourceTree = "<group>"; };
+		B1D79F0725C8641D00FCFD8E /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		B1D79F0A25C8709600FCFD8E /* Zaglushka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zaglushka.png; sourceTree = "<group>"; };
 		B1DC405B25B5FE1B00BA134A /* IOS_Senin_3_ist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Senin_3_ist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DC405E25B5FE1B00BA134A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1DC406025B5FE1B00BA134A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				B1EA6E5725BF412400E824A9 /* SelectFolderController.swift */,
 				B19B1BF925C1D75200C8BFAF /* NoteMapController.swift */,
 				B19CC99125C32E89000508C2 /* MapController.swift */,
+				B1D79F0725C8641D00FCFD8E /* NoteCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				B135429525C70290001CD991 /* Localizable.strings */,
 				B13542BD25C70CFD001CD991 /* Info.plist */,
 				B13542A325C706DE001CD991 /* InfoPlist.strings */,
+				B1D79F0A25C8709600FCFD8E /* Zaglushka.png */,
 			);
 			path = IOS_Senin_3_ist;
 			sourceTree = "<group>";
@@ -224,6 +230,7 @@
 			files = (
 				B1DC406E25B5FE1C00BA134A /* LaunchScreen.storyboard in Resources */,
 				B135429325C70290001CD991 /* Localizable.strings in Resources */,
+				B1D79F0B25C8709600FCFD8E /* Zaglushka.png in Resources */,
 				B1DC406B25B5FE1C00BA134A /* Assets.xcassets in Resources */,
 				B1DC406625B5FE1B00BA134A /* Main.storyboard in Resources */,
 				B13542A125C706DE001CD991 /* InfoPlist.strings in Resources */,
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1D79F0825C8641D00FCFD8E /* NoteCell.swift in Sources */,
 				B1DC408625B60B3D00BA134A /* Note+CoreDataProperties.swift in Sources */,
 				B1703A7725C08F4D003EFBA1 /* LocationManager.swift in Sources */,
 				B1DC407F25B60B3D00BA134A /* Location+CoreDataClass.swift in Sources */,

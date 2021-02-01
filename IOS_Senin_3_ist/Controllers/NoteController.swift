@@ -35,6 +35,9 @@ class NoteController: UITableViewController {
         textDescription.text = note?.textDescription
         imageView.image = note?.imageActual
         
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.layer.masksToBounds = true
+        
         navigationItem.title = note?.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
